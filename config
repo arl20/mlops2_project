@@ -1,0 +1,4 @@
+[core]
+    remote = repo
+['remote "repo"']
+    url = https://drive.google.com/file/d/1q8E234VIad47M7tb1s_j6K8BJvgnM8Ij

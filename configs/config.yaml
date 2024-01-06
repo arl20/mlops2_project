@@ -1,0 +1,11 @@
+model_name: 'gb'
+model_params:
+ learning_rate: 0.1
+ n_estimators: 50
+ max_depth: 4
+data:
+ train_path: 'data/mlops_train_dataset.csv'
+ test_x_path: 'data/mlops_test_dataset.csv'
+ target_column: 'Churn'
+ columns_for_drop: 'customerID'
+ columns_to_float: 'TotalCharges'
