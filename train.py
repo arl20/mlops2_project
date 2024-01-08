@@ -48,7 +48,6 @@ def save_model(model, model_name):
 
 @hydra.main(config_path="configs", config_name="config", version_base=None)
 def train(cfg: DictConfig):
-    os.system("dvc fetch data/mlops_train_dataset.csv")
     os.system("dvc pull --remote myremote")
     X_train, y_train = load_and_prepare_train_data(
         cfg.data.train_path,

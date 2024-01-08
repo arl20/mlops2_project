@@ -26,8 +26,6 @@ def predict(X_test, model_name):
 
 @hydra.main(config_path="configs", config_name="config", version_base=None)
 def infer(cfg: DictConfig):
-    os.system("dvc fetch data/mlops_test_dataset.csv")
-    os.system(f"dvc fetch {cfg.model_name}.joblib")
     os.system("dvc pull --remote myremote")
     X_test = load_and_prepare_data(
         cfg.data.test_x_path, cfg.data.columns_for_drop, cfg.data.columns_to_float
